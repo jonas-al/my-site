@@ -73,7 +73,7 @@ const Responsive = () => {
         <Slider {...settings} >
 
             <div>
-                <Card text='JavaScript' icon={JSIcon} />
+                <Card text='JS' icon={JSIcon} />
             </div>
 
             <div>
@@ -85,7 +85,7 @@ const Responsive = () => {
             </div>
 
             <div>
-                <Card text='JavaScript' icon={JSIcon} />
+                <Card text='JS' icon={JSIcon} />
             </div>
 
             <div>

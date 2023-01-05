@@ -30,6 +30,14 @@ module.exports = {
       },
       width: {
         'mac-window-w': '46rem'
+      },
+      backgroundImage: {
+        'waves-1440': "url('../assets/layered-waves-haikei.svg')",
+        'waves-1280': "url('../assets/layered-waves-haikei-1280.svg')",
+        'waves-1024': "url('../assets/layered-waves-haikei-1024.svg')",
+        'waves-768': "url('../assets/layered-waves-haikei-768.svg')",
+        'waves-640': "url('../assets/layered-waves-haikei-640.svg')",
+        'waves-500': "url('../assets/layered-waves-haikei-500.svg')",
       }
     },
   },

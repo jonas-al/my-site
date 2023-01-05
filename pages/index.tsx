@@ -20,16 +20,16 @@ export default function Home() {
   return (
     <div className="">
       <header className='h-28 bg-black' >
-        <div className="h-full flex px-10 justify-between items-center ">
+        <div className="h-full flex px-10 justify-between items-center">
           <div>
             <h1 className="text-5xl sm:text-7xl font-heading font-bold text-white ">YONAS.</h1>
           </div>
           <div className="hidden md:block">
             <nav className="text-xl font-heading font-semibold text-white space-x-4" >
-              <a href="./" >home</a>
-              <a href="./">sobre min</a>
-              <a href="./">projetos</a>
-              <a href="./">contatos</a>
+              <a href="./" className="p-1 rounded hover:bg-white hover:text-black">home</a>
+              <a href="./" className="p-1 rounded hover:bg-white hover:text-black">sobre min</a>
+              <a href="./" className="p-1 rounded hover:bg-white hover:text-black">projetos</a>
+              <a href="./" className="p-1 rounded hover:bg-white hover:text-black">contatos</a>
             </nav>
           </div>
           <div className="mobile-header md:hidden">
@@ -90,9 +90,12 @@ export default function Home() {
         
         <section>
           <div id='about' className='w-full mt-52 mb-10 overflow-x-visible'>
-            <div className='w-full absolute'>
-              <Image src={Waves} alt='Waves Image' className='w-full'></Image>
-            </div>
+            <div className='w-full h-full absolute bg-cover bg-waves-500 
+            2xl:bg-waves-1440
+            xl:bg-waves-1280
+            lg:bg-waves-1024
+            md:bg-waves-768
+            sm:bg-waves-640'> aaaaaaaa</div>
             <SimpleSlide></SimpleSlide>
           </div>
           
