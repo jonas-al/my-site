@@ -10,7 +10,8 @@ module.exports = {
       fontFamily: {
         'heading': ['Baloo\\ 2', 'sans-serif'],
         'body': ['Roboto', 'sans-serif'],
-        'details': ['Roboto\\ Mono', 'sans-serif']
+        'details': ['Roboto\\ Mono', 'sans-serif'],
+        'footer': ['Inter', 'sans-serif']
       },
       colors: {
         'black': '#000000',
@@ -18,7 +19,9 @@ module.exports = {
         'medium-black': '#1A1919',
         'white': '#FFFFFF',
         'gray': '#757575',
+        'medium-gray': '#d9d9d9',
         'light-gray': '#F2F2F2',
+        'gray-gradient': '#181818',
         'green': '#35C245',
         'yellow': '#F7B336',
         'red': '#F85251',
@@ -29,7 +32,7 @@ module.exports = {
         'mac-window-h': '32rem',
       },
       width: {
-        'mac-window-w': '46rem'
+        'mac-window-w': '50rem'
       },
       backgroundImage: {
         'waves-1440': "url('../assets/layered-waves-haikei.svg')",

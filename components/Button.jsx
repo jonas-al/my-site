@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Image from 'next/image'
 
-const StyledButton = styled.button`
+const StyledButton = styled.a`
     padding: 2px;
     border-radius: .3em;
     border: double 0px transparent;
@@ -17,10 +17,14 @@ const StyledButton = styled.button`
     }
 `
 
-const Button = ( { text, icon } ) => {
+const Button = ( { link, text, icon } ) => {
     if(icon){
         return (
-            <StyledButton className='w-32 h-11 flex justify-center gap-x-3 items-center bg-black hover:bg-medium-black'>
+            <StyledButton 
+                href={link}
+                target={'_blank'}
+                className='w-32 h-11 flex justify-center gap-x-3 items-center bg-black hover:bg-medium-black'
+            >
                 <Image src={icon} alt='Icon' />
                 <p className='text-lg text-white font-body font-bold'>{text}</p>
             </StyledButton>
@@ -28,7 +32,11 @@ const Button = ( { text, icon } ) => {
     }
     
     return (
-        <StyledButton className='w-32 h-11 flex justify-center gap-x-3 items-center bg-black hover:bg-medium-black'>
+        <StyledButton
+            href="/curriculo-jonas.pdf"
+            target={'_blank'}
+            className='w-32 h-11 flex justify-center gap-x-3 items-center bg-black hover:bg-medium-black'
+        >
             <p className='text-lg text-white font-body font-bold'>{text}</p>
         </StyledButton>
     )

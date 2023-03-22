@@ -71,37 +71,68 @@ const Responsive = () => {
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
         />
         <Slider {...settings} >
-
             <div>
-                <Card text='JS' icon={JSIcon} />
+                <Card 
+                  label='JS'
+                  text={'Uma linguagem de programação de alto nível e dinâmica, utilizada principalmente para desenvolvimento web e front-end.'}
+                  icon={JSIcon} 
+                />
             </div>
 
             <div>
-                <Card text='HTML' icon={HTMLIcon} />
+                <Card 
+                  label='HTML'
+                  text={'HTML, ou Hypertext Markup Language, é uma linguagem de marcação utilizada para criar documentos que podem ser exibidos em um navegador da web.'}
+                  icon={HTMLIcon} 
+                />
             </div>
 
             <div>
-                <Card text='CSS' icon={CSSIcon} />
+                <Card 
+                  label='CSS'
+                  text={'CSS, ou Cascading Style Sheets, é uma linguagem de estilo utilizada para definir a aparência e o layout de documentos HTML.'}
+                  icon={CSSIcon} 
+                />
             </div>
 
             <div>
-                <Card text='JS' icon={JSIcon} />
+                <Card 
+                  label='JS' 
+                  text={'Uma linguagem de programação de alto nível e dinâmica, utilizada principalmente para desenvolvimento web e front-end.'}
+                  icon={JSIcon} 
+                />
             </div>
 
             <div>
-                <Card text='React' icon={ReactIcon} />
+                <Card 
+                  label='React' 
+                  text={'Uma biblioteca de JavaScript de código aberto utilizada para construir interfaces de usuário (UI).'}
+                  icon={ReactIcon} 
+                />
             </div>
 
             <div>
-                <Card text='C/C++' icon={CIcon} />
+                <Card 
+                  label='C/C++' 
+                  text={'C++ é uma linguagem de programação de alto nível, compilada e orientada a objetos. Amplamente utilizada para desenvolvimento de sistemas.'}
+                  icon={CIcon} 
+                />
             </div>
 
             <div>
-                <Card text='Python' icon={PythonIcon} />
+                <Card 
+                  label='Python'
+                  text={'Uma linguagem de programação de alto nível, interpretada, interativa e orientada a objetos. Amplamente utilizada para desenvolvimento web, científico, AI, entre outros.'}
+                  icon={PythonIcon} 
+                />
             </div>
 
             <div>
-                <Card text='React' icon={ReactIcon} />
+                <Card 
+                  label='React'
+                  text={'Uma biblioteca de JavaScript de código aberto utilizada para construir interfaces de usuário (UI).'}
+                  icon={ReactIcon} 
+                />
             </div>
 
         </Slider>
@@ -111,7 +142,7 @@ const Responsive = () => {
 
 const SimpleSlide = () => {
   return (
-    <div className='sm:px-8 lg:16 xl:px-28'>
+    <div className='sm:px-8 lg:16 xl:px-20'>
         <Responsive />
     </div>
   )
