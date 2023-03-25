@@ -129,7 +129,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section className='flex-col px-6 pb-32' id='projects' style={{background: 'linear-gradient(180deg, rgba(24, 24, 24, 0) 93.35%, #090808 99.18%, #090808 99.18%), linear-gradient(180deg, #000000 57.61%, #000000 100%)'}}>
+        <section 
+        className='flex-col px-6 pb-32 bg-gradient-to-b from-[black_13.55%] via-[black_90%] to-[gray_200.53%]' id='projects'>
           <h1 className='text-center text-3xl font-details font-bold text-white mb-9'>Projetos pessoais</h1>
           <div className='flex flex-col w-full gap-x-20 gap-y-10 justify-center items-center md:flex-row md:items-stretch'>
             <Project
