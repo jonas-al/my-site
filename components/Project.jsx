@@ -7,7 +7,7 @@ const Project = ({projectImage, description, url}) => {
         <div className='p-4 border-2 border-dashed border-white rounded-lg bg-[#090909]'>
             {url
             ?
-            <a href={url} target={'_blank'} rel={'extern'}>
+            <a href={url} target={'_blank'} rel='noreferrer'>
                 <Image className='rounded-lg hover:scale-[1.02]' src={projectImage} alt='Projeto'/>
             </a>
             :
