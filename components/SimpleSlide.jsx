@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from "next/link";
 
 import Slider from "react-slick";
 import Card from './Card';
@@ -40,7 +39,15 @@ const Responsive = () => {
           }
         },
         {
-            breakpoint: 700,
+          breakpoint: 900,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            centerMode: true
+          }
+        },
+        {
+            breakpoint: 800,
             settings: {
               slidesToShow: 2,
               slidesToScroll: 1,
@@ -48,7 +55,7 @@ const Responsive = () => {
             }
         },
         {
-            breakpoint: 415,
+            breakpoint: 520,
             settings: {
               slidesToShow: 1,
               slidesToScroll: 1,
@@ -62,7 +69,7 @@ const Responsive = () => {
         <link
           rel="stylesheet"
           type="text/css"
-          charset="UTF-8"
+          charSet="UTF-8"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
         />
         <link
@@ -122,7 +129,7 @@ const Responsive = () => {
             <div>
                 <Card 
                   label='Python'
-                  text={'Uma linguagem de programação de alto nível, interpretada, interativa e orientada a objetos. Amplamente utilizada para desenvolvimento web, científico, AI, entre outros.'}
+                  text={'Uma linguagem de programação de alto nível. Amplamente utilizada para desenvolvimento web, científico, AI, entre outros.'}
                   icon={PythonIcon} 
                 />
             </div>

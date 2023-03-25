@@ -1,9 +1,9 @@
 import React, { Component, useState } from 'react';
 import Image from 'next/image'
-import Link from 'next/link'
 
 import  Button  from '../components/Button'
 import  SimpleSlide  from '../components/SimpleSlide'
+import Project from '../components/Project'
 
 import GitIcon from '../assets/github-svgrepo-com.svg'
 import LinkedinIcon from '../assets/linkedin-svgrepo-com.svg'
@@ -17,7 +17,6 @@ import Site1 from '../assets/site-1.svg'
 
 export default function Home() {
   const [stateMenu, setStateMenu] = useState(false);
-  const [showProjectOne, setShowProjectOne] = useState(false)
 
   const handleClickMenu  = () => {
     setStateMenu(!stateMenu)
@@ -40,13 +39,13 @@ export default function Home() {
           <div className="mobile-header md:hidden">
               <button type="button" onClick={handleClickMenu} className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-white focus:outline-none hover:ring-2 hover:ring-white">
 
-                {!stateMenu && <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"   viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff6ff" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                {!stateMenu && <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"   viewBox="0 0 24 24" strokeWidth="1.5" stroke="#fff6ff" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                 </svg>}
 
 
-                {stateMenu && <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff6ff" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                {stateMenu && <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#fff6ff" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>}
               </button>
           </div>
@@ -55,9 +54,15 @@ export default function Home() {
 
       {stateMenu && <div className='w-screen flex mt-24 justify-end'>
         <div className="w-1/2 fixed md:hidden space-y-1 px-2 pt-2 pb-3 sm:px-3 bg-black text-end rounded-bl-lg z-10">
-                    <a href="#" className="text-gray-300 hover:bg-soft-black hover:text-white block px-3 py-2 rounded-md text-white font-medium">home</a>
-                    <a href="#projects" className="text-gray-300 hover:bg-soft-black hover:text-white block px-3 py-2 rounded-md text-white font-medium">projetos</a>
-                    <a href="#footer" className="text-gray-300 hover:bg-soft-black hover:text-white block px-3 py-2 rounded-md text-white font-medium">contatos</a>
+                    <a href="#" className="text-gray-300 hover:bg-soft-black hover:text-white block px-3 py-2 rounded-md text-white font-medium"
+                    onClick={() => setStateMenu(!stateMenu)}
+                    >home</a>
+                    <a href="#projects" className="text-gray-300 hover:bg-soft-black hover:text-white block px-3 py-2 rounded-md text-white font-medium"
+                    onClick={() => setStateMenu(!stateMenu)}
+                    >projetos</a>
+                    <a href="#footer" className="text-gray-300 hover:bg-soft-black hover:text-white block px-3 py-2 rounded-md text-white font-medium"
+                    onClick={() => setStateMenu(!stateMenu)}
+                    >contatos</a>
           </div>
       </div>}
 
@@ -113,7 +118,7 @@ export default function Home() {
         </section>
         
         <section>
-          <div id='about' className='w-full mt-52 overflow-x-visible'>
+          <div className='w-full mt-52 overflow-x-visible'>
             <SimpleSlide />
             <div className='w-full h-screen mt-[-480px] bg-cover bg-waves-500 
             2xl:bg-waves-1440
@@ -124,32 +129,19 @@ export default function Home() {
           </div>
         </section>
 
-        <section className='flex-col pb-24 justify-center items-center' id='projects' style={{background: 'linear-gradient(180deg, rgba(24, 24, 24, 0) 93.35%, #090808 99.18%, #090808 99.18%), linear-gradient(180deg, #000000 57.61%, #000000 100%)'}}>
-          <h1 className='text-center text-3xl font-details font-bold text-white mb-9'>Projetos</h1>
-          <div className='w-full grid grid-cols-[1fr_1fr_1fr] grid-rows-2 gap-2 px-2 2xl:px-60 xl:px-40 lg:px-20'>
-            <div 
-                onMouseEnter={() => setShowProjectOne(true)}
-                onMouseLeave={() => setShowProjectOne(false)}
-                className='flex w-full flex-col items-center justify-center rounded-3xl col-start-1 col-end-3 row-start-1 row-end-1 hover:cursor-pointer'
-              >
-              {showProjectOne &&
-                <div className='w-full p-4 text-white z-10 absolute bg-black bg-opacity-80 rounded-md md:w-1/3'>
-                  <p className='text-left text-sm sm:text-[2px] overflow-hidden'>
-                    Como parte do Centro Acadêmico de Ciência da Computação da Universidade Federal do Pará, desenvolvemos um projeto utilizando tecnologias modernas, incluindo ReactJS, NextJS e Node. Nosso objetivo era criar uma plataforma que pudesse fornecer informações importantes e recursos relevantes para a comunidade acadêmica de Ciência da Computação.
-                  </p>
-                </div>
-              }
-              <Image src={Site1} alt='Site' className='rounded-3xl col-start-1 col-end-3 row-start-1 row-end-1 hover:scale-[1.02] hover:blur-[2px]'/>
-            </div>
-            <div className='flex rounded-3xl bg-medium-gray row-start-2 justify-center items-center hover:scale-[1.02]'>
-              <p className='font-details text-xs font-bold text-justify 2xl:text-xl lg:text-xl'>EM <br/> ANDAMENTO...</p>
-            </div>
-            <div className='flex rounded-3xl bg-medium-gray row-start-2 justify-center items-center hover:scale-[1.02]'>
-              <p className='font-details text-xs font-bold text-justify 2xl:text-xl lg:text-xl'>EM <br/> ANDAMENTO...</p>
-            </div>
-            <div className='flex rounded-3xl bg-medium-gray col-start-3 row-start-1 row-end-3 justify-center items-center hover:scale-[1.02]'>
-              <p className='font-details text-xs font-bold text-justify 2xl:text-xl lg:text-xl'>EM <br/> ANDAMENTO...</p>
-            </div>
+        <section className='flex-col px-6 pb-32' id='projects' style={{background: 'linear-gradient(180deg, rgba(24, 24, 24, 0) 93.35%, #090808 99.18%, #090808 99.18%), linear-gradient(180deg, #000000 57.61%, #000000 100%)'}}>
+          <h1 className='text-center text-3xl font-details font-bold text-white mb-9'>Projetos pessoais</h1>
+          <div className='flex flex-col w-full gap-x-20 gap-y-10 justify-center items-center md:flex-row md:items-stretch'>
+            <Project
+              projectImage={Site1}
+              description={'Como parte do Centro Acadêmico de Ciência da Computação da Universidade Federal do Pará, desenvolvemos um projeto utilizando tecnologias modernas, incluindo ReactJS, NextJS e Node. Nosso objetivo era criar uma plataforma que pudesse fornecer informações importantes e recursos relevantes para a comunidade acadêmica de Ciência da Computação.'}
+              url={'https://lucent-longma-775719.netlify.app/'}
+            />
+            <Project
+              projectImage={Site1}
+              description={'Projeto: Valorant Agents. Este é um projeto cujo objetivo é produzir uma página web com informações sobre os agentes do jogo Valorant, consumindo uma API pública para trazer essas informações para o usuário.'}
+              url={null}
+            />
           </div>
         </section>
       </main>
