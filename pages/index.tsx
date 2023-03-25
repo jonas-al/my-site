@@ -150,13 +150,13 @@ export default function Home() {
         <Image src={Logo} alt='Logo'></Image>
         <div className='text-center'>
           <div className='flex gap-x-2'>
-            <a href="https://www.instagram.com/yonas.al_/" target={'_blank'}>
+            <a href="https://www.instagram.com/yonas.al_/" target={'_blank'} rel="extern">
               <Image src={InstagramLogo} alt='Instagram' className='w-[20px] sm:w-[25px]'></Image>
             </a>
-            <a href="https://twitter.com/yonas_al_" target={'_blank'}>
+            <a href="https://twitter.com/yonas_al_" target={'_blank'} rel="extern">
               <Image src={TwitterLogo} alt='Twitter' className='w-[20px] sm:w-[25px]'></Image>
             </a>
-            <a href="https://www.tiktok.com/@y.0nas" target={'_blank'} className='ml-[-3px]'>
+            <a href="https://www.tiktok.com/@y.0nas" target={'_blank'} className='ml-[-3px]' rel="extern">
               <Image src={TiktokLogo} alt='Tiktok' className='w-[20px] sm:w-[25px]'></Image>
             </a>
           </div>

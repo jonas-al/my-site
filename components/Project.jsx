@@ -7,12 +7,12 @@ const Project = ({projectImage, description, url}) => {
         <div className='p-4 border-2 border-dashed border-white rounded-lg bg-[#090909]'>
             {url
             ?
-            <a href={url} target={'_blank'}>
-                <Image className='rounded-lg hover:scale-[1.02]' src={projectImage}/>
+            <a href={url} target={'_blank'} rel={'extern'}>
+                <Image className='rounded-lg hover:scale-[1.02]' src={projectImage} alt='Projeto'/>
             </a>
             :
             <div className='flex bg-white rounded-lg items-center justify-center hover:scale-[1.02]'>
-              <Image className='rounded-lg hover:scale-[1.02] opacity-0' src={projectImage}/>
+              <Image className='rounded-lg hover:scale-[1.02] opacity-0' src={projectImage} alt='Projeto'/>
               <p className='absolute font-details text-lg'>Em andamento!</p>
             </div>
           }
