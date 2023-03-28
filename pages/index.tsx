@@ -85,7 +85,7 @@ export default function Home() {
                   Seja muito bem-vindo(a) ao meu portfólio!
                 </p>
                 <p className='text-lg sm:text-xl text-black font-details'>
-                  Como já falei meu é Jonas e atualmente resido em Belém, capital do estado do Pará. Atualmente, estou cursando o sexto semestre de Ciência da Computação na Universidade Federal do Pará.
+                  Atualmente resido em Belém, capital do estado do Pará. Estou cursando o sexto semestre de Ciência da Computação na Universidade Federal do Pará.
                 </p>
                 <p className='text-lg sm:text-xl text-black font-details'>
                   Fico muito feliz que tenha reservado um pedacinho do seu tempo para conhecer mais sobre mim e meu trabalho. Neste portfólio, você encontrará alguns dos projetos e experiências que adquiri ao longo de minha jornada acadêmica e profissional.
