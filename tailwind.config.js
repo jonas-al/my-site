@@ -31,7 +31,7 @@ module.exports = {
       height: {
         'mac-window-h': '32rem',
       },
-      width: {
+      maxWidth: {
         'mac-window-w': '45rem'
       },
       backgroundImage: {

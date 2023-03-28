@@ -68,7 +68,7 @@ export default function Home() {
 
       <main>
         <section className='px-5 mt-32 justify-center w-full sm:mt-32 h-max flex xl:justify-between items-center sm:px-20 gap-x-5' id='home'>
-          <div className='bg-white w-mac-window-w rounded-3xl'>
+          <div className='bg-white max-w-mac-window-w rounded-3xl'>
             <div className='flex pl-7 h-10 items-center gap-x-3 rounded-tl-3xl rounded-tr-3xl bg-light-gray'>
               <div className='w-4 h-4 bg-red rounded-full'></div>
               <div className='w-4 h-4 bg-yellow rounded-full'></div>
