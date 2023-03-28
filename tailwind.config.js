@@ -32,7 +32,7 @@ module.exports = {
         'mac-window-h': '32rem',
       },
       width: {
-        'mac-window-w': '50rem'
+        'mac-window-w': '45rem'
       },
       backgroundImage: {
         'waves-1440': "url('/layered-waves-haikei.svg')",

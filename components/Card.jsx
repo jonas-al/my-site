@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const Card = ({ label, text, icon }) => {
   return (
-    <div className='h-[450px] bg-gradient-to-tr from-pink to-blue rounded-md ml-2 max-[450px]:h-[400px] sm:h-[450px] lg:h-[420px] xl:h-[380px] 2xl:h-[400px]'>
+    <div className='h-[400px] mr-2 bg-gradient-to-tr from-pink to-blue rounded-md ml-2 min-[450px]:h-[390px] sm:h-[400px] lg:h-[450px] xl:h-[420px] 2xl:h-[400px]'>
         <div className='flex p-4'>
             <Image src={icon} alt="A icon"/>
             <div className='w-full flex justify-center items-center'>

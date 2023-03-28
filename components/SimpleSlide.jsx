@@ -23,19 +23,18 @@ const Responsive = () => {
       initialSlide: 0,
       responsive: [
         {
-          breakpoint: 1536,
+          breakpoint: 1650,
           settings: {
             slidesToShow: 4,
             slidesToScroll: 4,
-            infinite: true,
-            dots: false
           }
         },
         {
-          breakpoint: 1200,
+          breakpoint: 1024,
           settings: {
-            slidesToShow: 4,
+            slidesToShow: 3,
             slidesToScroll: 1,
+            centerMode: true
           }
         },
         {
@@ -47,7 +46,7 @@ const Responsive = () => {
           }
         },
         {
-            breakpoint: 800,
+            breakpoint: 820,
             settings: {
               slidesToShow: 2,
               slidesToScroll: 1,
@@ -55,7 +54,7 @@ const Responsive = () => {
             }
         },
         {
-            breakpoint: 520,
+            breakpoint: 540,
             settings: {
               slidesToShow: 1,
               slidesToScroll: 1,
@@ -149,7 +148,7 @@ const Responsive = () => {
 
 const SimpleSlide = () => {
   return (
-    <div className='sm:px-8 lg:16 xl:px-20'>
+    <div className='lg:px-10 lg:16 xl:px-20'>
         <Responsive />
     </div>
   )

@@ -67,14 +67,14 @@ export default function Home() {
       </div>}
 
       <main>
-        <section className='px-5 mt-32 justify-center w-full sm:mt-32 h-max flex lg:justify-between items-center sm:px-20 gap-x-5' id='home'>
+        <section className='px-5 mt-32 justify-center w-full sm:mt-32 h-max flex xl:justify-between items-center sm:px-20 gap-x-5' id='home'>
           <div className='bg-white w-mac-window-w rounded-3xl'>
             <div className='flex pl-7 h-10 items-center gap-x-3 rounded-tl-3xl rounded-tr-3xl bg-light-gray'>
               <div className='w-4 h-4 bg-red rounded-full'></div>
               <div className='w-4 h-4 bg-yellow rounded-full'></div>
               <div className='w-4 h-4 bg-green rounded-full'></div>
             </div>
-            <div className='px-8 flex flex-col md:pl-14 py-10 gap-y-16'>
+            <div className='px-12 flex flex-col py-8 gap-y-8'>
               <div className='flex flex-col gap-y-5 w-full'>
                 <div>
                   <p className='text-xl sm:text-2xl text-gray font-body'>Oi, me chamo</p>
@@ -112,8 +112,8 @@ export default function Home() {
             </div>
           </div>
           
-          <div className='hidden lg:block'>
-            <Image src={People} alt='A people developer'></Image>
+          <div className='hidden w-[35%] xl:block'>
+            <Image src={People} alt='A people developer' className='w-full'/>
           </div>
         </section>
         
