@@ -119,6 +119,7 @@ export default function Home() {
         
         <section>
           <div className='w-full mt-52 overflow-x-visible'>
+            <h1 className='text-center text-3xl font-details font-bold text-white mb-9'>Competências</h1>
             <SimpleSlide />
             <div className='w-full h-screen mt-[-480px] bg-cover bg-waves-500 
             2xl:bg-waves-1440

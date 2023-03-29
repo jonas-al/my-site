@@ -12,7 +12,7 @@ const Project = ({projectImage, description, url}) => {
             </a>
             :
             <div className='flex bg-white rounded-lg items-center justify-center hover:scale-[1.02]'>
-              <Image className='rounded-lg hover:scale-[1.02] opacity-0' src={projectImage} alt='Projeto'/>
+              <Image className='rounded-lg hover:scale-[1.02] hover:cursor-pointer opacity-0' src={projectImage} alt='Projeto'/>
               <p className='absolute font-details text-lg'>Em andamento!</p>
             </div>
           }
