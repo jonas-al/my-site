@@ -148,7 +148,7 @@ const Responsive = () => {
 
 const SimpleSlide = () => {
   return (
-    <div className='lg:px-10 lg:16 xl:px-20'>
+    <div className='lg:px-10 lg:16 xl:px-20' data-aos="fade-left">
         <Responsive />
     </div>
   )

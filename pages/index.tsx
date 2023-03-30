@@ -1,5 +1,7 @@
-import React, { Component, useState } from 'react';
+import React, { Component, useState, useEffect } from 'react';
 import Image from 'next/image'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import  Button  from '../components/Button'
 import  SimpleSlide  from '../components/SimpleSlide'
@@ -7,15 +9,19 @@ import Project from '../components/Project'
 
 import GitIcon from '../assets/github-svgrepo-com.svg'
 import LinkedinIcon from '../assets/linkedin-svgrepo-com.svg'
-import People from '../assets/people_svg.svg'
+import Me from '../assets/me.png'
 import Logo from '../assets/logo.svg'
 import InstagramLogo from '../assets/instagram-logo.svg'
 import TwitterLogo from '../assets/twitter-logo.svg'
 import TiktokLogo from '../assets/tiktok-logo.svg'
 import Site1 from '../assets/site-1.svg'
 
-
 export default function Home() {
+
+  useEffect(() => {
+    AOS.init();
+  }, [])
+
   const [stateMenu, setStateMenu] = useState(false);
 
   const handleClickMenu  = () => {
@@ -66,7 +72,7 @@ export default function Home() {
           </div>
       </div>}
 
-      <main className='w-screen'>
+      <main className='w-screen' data-aos="fade-up">
         <section className='px-5 mt-32 justify-center w-full sm:mt-32 h-max flex xl:justify-between items-center sm:px-20 gap-x-5' id='home'>
           <div className='bg-white max-w-[400px] rounded-3xl min-[450px]:max-w-mac-window-w'>
             <div className='flex pl-7 h-10 items-center gap-x-3 rounded-tl-3xl rounded-tr-3xl bg-light-gray'>
@@ -112,8 +118,8 @@ export default function Home() {
             </div>
           </div>
           
-          <div className='hidden w-[35%] xl:block'>
-            <Image src={People} alt='A people developer' className='w-full'/>
+          <div className='hidden xl:block'>
+            <Image src={Me} alt='A people developer' className='w-[300px] rounded-lg'/>
           </div>
         </section>
         
@@ -149,17 +155,17 @@ export default function Home() {
       </main>
 
       <footer className='flex justify-between items-center w-full h-32 bg-black px-5 2xl:px-44 md:px-36' id='footer'>
-        <Image src={Logo} alt='Logo'></Image>
+        <Image src={Logo} alt='Logo' />
         <div className='text-center'>
           <div className='flex gap-x-2'>
             <a href="https://www.instagram.com/yonas.al_/" target={'_blank'} rel="noreferrer">
-              <Image src={InstagramLogo} alt='Instagram' className='w-[20px] sm:w-[25px]'></Image>
+              <Image src={InstagramLogo} alt='Instagram' className='w-[20px] sm:w-[25px]' />
             </a>
             <a href="https://twitter.com/yonas_al_" target={'_blank'} rel="noreferrer">
-              <Image src={TwitterLogo} alt='Twitter' className='w-[20px] sm:w-[25px]'></Image>
+              <Image src={TwitterLogo} alt='Twitter' className='w-[20px] sm:w-[25px]' />
             </a>
             <a href="https://www.tiktok.com/@y.0nas" target={'_blank'} className='ml-[-3px]' rel="noreferrer">
-              <Image src={TiktokLogo} alt='Tiktok' className='w-[20px] sm:w-[25px]'></Image>
+              <Image src={TiktokLogo} alt='Tiktok' className='w-[20px] sm:w-[25px]' />
             </a>
           </div>
           <p className='text-white font-extralight text-base font-footer'>@
