@@ -4,18 +4,20 @@ import { Link, Element, animateScroll as scroll } from 'react-scroll'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import  Button  from '../components/Button'
-import  SimpleSlide  from '../components/SimpleSlide'
+import Button  from '../components/Button'
+import SimpleSlide  from '../components/SimpleSlide'
 import Project from '../components/Project'
 
-import GitIcon from '../assets/github-svgrepo-com.svg'
-import LinkedinIcon from '../assets/linkedin-svgrepo-com.svg'
-import People from '../assets/people_svg.svg'
-import Logo from '../assets/logo.svg'
-import InstagramLogo from '../assets/instagram-logo.svg'
-import TwitterLogo from '../assets/twitter-logo.svg'
-import TiktokLogo from '../assets/tiktok-logo.svg'
-import Site1 from '../assets/site-1.svg'
+import GitIcon from '/assets/github-svgrepo-com.svg'
+import LinkedinIcon from '/assets/linkedin-svgrepo-com.svg'
+import People from '/assets/people_svg.svg'
+import Logo from '/assets/logo.svg'
+import InstagramLogo from '/assets/instagram-logo.svg'
+import TwitterLogo from '/assets/twitter-logo.svg'
+import TiktokLogo from '/assets/tiktok-logo.svg'
+import Site1 from '/assets/site-1.svg'
+import Site2 from '/assets/site-2.png'
+import Site3 from '/assets/site-3.png'
 
 export default function Home() {
 
@@ -48,6 +50,7 @@ export default function Home() {
                 to="projects"
                 smooth={true}
                 duration={500}
+                offset={-200}
                 className="p-1 rounded hover:bg-white hover:text-black"
               >
                 projetos
@@ -104,7 +107,7 @@ export default function Home() {
       </div>}
 
       <main className='w-screen'>
-        <section className='px-5 mt-32 justify-center w-full sm:mt-32 h-max flex xl:justify-between items-center sm:px-20 gap-x-5' id='home'>
+        <section className='h-[80vh] px-5 mt-32 justify-center w-full sm:mt-32  flex xl:justify-between items-center sm:px-20 gap-x-5' id='home'>
           <div className='bg-white max-w-[400px] rounded-3xl min-[450px]:max-w-mac-window-w' data-aos="fade-up">
             <div className='flex pl-7 h-10 items-center gap-x-3 rounded-tl-3xl rounded-tr-3xl bg-light-gray'>
               <div className='w-4 h-4 bg-red rounded-full'></div>
@@ -160,7 +163,7 @@ export default function Home() {
         </section>
         
         <section>
-          <div className='w-full mt-52 overflow-x-visible'>
+          <div className='w-full mt-20 overflow-x-visible'>
             <h1 className='text-center text-3xl font-details font-bold text-white mb-9'>Competências</h1>
             <SimpleSlide />
             <div className='w-full h-screen mt-[-480px] bg-cover bg-waves-500 
@@ -177,17 +180,28 @@ export default function Home() {
           className='flex-col px-6 pb-32 bg-gradient-to-b from-[black_13.55%] via-[black_90%] to-[gray_200.53%]' id='projects'
         >
           <h1 className='text-center text-3xl font-details font-bold text-white mb-9'>Projetos pessoais</h1>
-          <div className='flex flex-col w-full gap-x-20 gap-y-10 justify-center items-center md:flex-row md:items-stretch'>
-            <Project
-              projectImage={Site1}
-              description={'Como parte do Centro Acadêmico de Ciência da Computação da Universidade Federal do Pará, desenvolvemos um projeto utilizando tecnologias modernas, incluindo ReactJS, NextJS e Node. Nosso objetivo era criar uma plataforma que pudesse fornecer informações importantes e recursos relevantes para a comunidade acadêmica de Ciência da Computação.'}
-              url={'https://lucent-longma-775719.netlify.app/'}
-            />
-            <Project
-              projectImage={Site1}
-              description={'Projeto: Valorant Agents. Este é um projeto cujo objetivo é produzir uma página web com informações sobre os agentes do jogo Valorant, consumindo uma API pública para trazer essas informações para o usuário.'}
-              url={null}
-            />
+          <div className='w-full grid grid-cols-1 lg:grid-cols-2 grid-rows-2 justify-items-center gap-6'>
+            <div className='max-w-[800px]'>
+              <Project
+                projectImage={Site1}
+                description={'Como parte do Centro Acadêmico de Ciência da Computação da Universidade Federal do Pará, desenvolvemos um projeto utilizando tecnologias modernas, incluindo ReactJS, NextJS e Node. Nosso objetivo era criar uma plataforma que pudesse fornecer informações importantes e recursos relevantes para a comunidade acadêmica de Ciência da Computação.'}
+                url={'https://lucent-longma-775719.netlify.app/'}
+              />
+            </div>
+            <div className='max-w-[800px]'>
+              <Project
+                projectImage={Site2}
+                description={'Projeto para os grupos de estudos e pesquisas Ligados ao GT09 - Trabalho e Educação da ANPEd. Criado com React, Next.js e Tailwind. Apresentamos informações sobre os grupos, os seus integrantes e os seus contatos. O objetivo deste projeto é fornercer informações relevantes dos grupos de estudo e pesquisa que estão distribuídos pelo território nacional.'}
+                url={'https://gt-brasil.netlify.app/'}
+              />
+            </div>
+            <div className='max-w-[800px]'>
+              <Project
+                projectImage={Site3}
+                description={'Egressos Facomp: Desenvolvido em Vue 3 com o auxílio do Tailwind CSS. Utilizando tecnologias como Java e Spring, eu e os meus colegas de turma criamos uma plataforma para a direção da faculdade de computação da UFPA mapear os egressos. Desenvolvido durante a disciplina de Laboratório de Engenharia de Software, o site atende aos requisitos do cliente e permite um mapeamento eficiente dos ex-alunos da faculdade.'}
+                url={'https://egressos.computacao.ufpa.br/'}
+              />
+            </div>
           </div>
         </Element>
       </main>

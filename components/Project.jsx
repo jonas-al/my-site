@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 const Project = ({projectImage, description, url}) => {
   return (
-    <div className='flex-col max-w-[500px] md:w-[500px]' data-aos="fade-up">
+    <div className='flex-col' data-aos="fade-up">
         <div className='p-4 border-2 border-dashed border-white rounded-lg bg-[#090909]'>
             {url
             ?
