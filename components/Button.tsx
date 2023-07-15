@@ -2,6 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import Image from 'next/image'
 
+interface Props {
+    link: string
+    text: string
+    icon: string | null
+}
+
 const StyledButton = styled.a`
     padding: 2px;
     border-radius: .3em;
@@ -17,7 +23,7 @@ const StyledButton = styled.a`
     }
 `
 
-const Button = ( { link, text, icon } ) => {
+const Button = ( { link, text, icon }:Props ) => {
     if(icon){
         return (
             <StyledButton 

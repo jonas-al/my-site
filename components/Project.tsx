@@ -1,6 +1,12 @@
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 
-const Project = ({projectImage, description, url}) => {
+interface Props {
+  projectImage: StaticImageData
+  description: string
+  url: string
+}
+
+const Project = ( {projectImage, description, url}: Props ) => {
   return (
     <div className='flex-col' data-aos="fade-up">
         <div className='p-4 border-2 border-dashed border-white rounded-lg bg-[#090909]'>

@@ -1,7 +1,13 @@
 import React from 'react'
 import Image from 'next/image'
 
-const Card = ({ label, text, icon }) => {
+interface Props {
+  label: string
+  text: string
+  icon: string
+}
+
+const Card = ( { label, text, icon }:Props ) => {
   return (
     <div className='h-[400px] mr-2 bg-gradient-to-tr from-pink to-blue rounded-md ml-2 min-[450px]:h-[390px] sm:h-[400px] lg:h-[450px] xl:h-[420px] 2xl:h-[400px]'>
         <div className='flex p-4'>

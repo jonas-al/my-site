@@ -4,9 +4,9 @@ import { Link, Element, animateScroll as scroll } from 'react-scroll'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import Button  from '../components/Button'
-import SimpleSlide  from '../components/SimpleSlide'
-import Project from '../components/Project'
+import Button  from '/components/Button'
+import SimpleSlide  from '/components/SimpleSlide'
+import Project from '/components/Project'
 
 import GitIcon from '/assets/github-svgrepo-com.svg'
 import LinkedinIcon from '/assets/linkedin-svgrepo-com.svg'
