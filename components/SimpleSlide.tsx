@@ -1,14 +1,14 @@
 import React from 'react'
-
 import Slider from "react-slick";
-import Card from './Card';
+import Card from '/components/Card';
 
-import CIcon from '../assets/c-plus-plus-svgrepo-com.svg'
-import CSSIcon from '../assets/css-file-format-with-brackets-svgrepo-com.svg'
-import HTMLIcon from '../assets/html-svgrepo-com.svg'
-import JSIcon from '../assets/js-icon.svg'
-import PythonIcon from '../assets/python-language-logotype-svgrepo-com.svg'
-import ReactIcon from '../assets/react-svgrepo-com.svg'
+import CIcon from '/assets/c-plus-plus-svgrepo-com.svg'
+import CSSIcon from '/assets/css-file-format-with-brackets-svgrepo-com.svg'
+import HTMLIcon from '/assets/html-svgrepo-com.svg'
+import JSIcon from '/assets/js-icon.svg'
+import PythonIcon from '/assets/python-language-logotype-svgrepo-com.svg'
+import ReactIcon from '/assets/react-svgrepo-com.svg'
+import VueIcon from '/assets/vue-svgrepo-com.svg'
 
 const Responsive = () => {
     const settings = {
@@ -135,9 +135,9 @@ const Responsive = () => {
 
             <div>
                 <Card 
-                  label='React'
-                  text={'Uma biblioteca de JavaScript de código aberto utilizada para construir interfaces de usuário (UI).'}
-                  icon={ReactIcon} 
+                  label='Vue'
+                  text={'Um framework JavaScript de código-aberto, focado no desenvolvimento de interfaces de usuário e aplicativos de página única.'}
+                  icon={VueIcon} 
                 />
             </div>
 
