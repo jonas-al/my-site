@@ -1,5 +1,6 @@
 import React, { Component, useState, useEffect } from 'react';
 import Image from 'next/image'
+import { Link, Element, animateScroll as scroll } from 'react-scroll'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -9,7 +10,7 @@ import Project from '../components/Project'
 
 import GitIcon from '../assets/github-svgrepo-com.svg'
 import LinkedinIcon from '../assets/linkedin-svgrepo-com.svg'
-import Me from '../assets/me.png'
+import People from '../assets/people_svg.svg'
 import Logo from '../assets/logo.svg'
 import InstagramLogo from '../assets/instagram-logo.svg'
 import TwitterLogo from '../assets/twitter-logo.svg'
@@ -37,9 +38,26 @@ export default function Home() {
           </div>
           <div className="hidden md:block">
             <nav className="text-xl font-heading font-semibold text-white space-x-4" >
-              <a href="#" className="p-1 rounded hover:bg-white hover:text-black">home</a>
-              <a href="#projects" className="p-1 rounded hover:bg-white hover:text-black">projetos</a>
-              <a href="#footer" className="p-1 rounded hover:bg-white hover:text-black">contatos</a>
+              <a
+                onClick={() => scroll.scrollToTop({smooth:true, duration: 500})}
+                className="p-1 rounded hover:bg-white hover:text-black"
+              >
+                home
+              </a>
+              <Link
+                to="projects"
+                smooth={true}
+                duration={500}
+                className="p-1 rounded hover:bg-white hover:text-black"
+              >
+                projetos
+              </Link>
+              <a
+                onClick={() => scroll.scrollToBottom({smooth:true, duration: 500})}
+                className="p-1 rounded hover:bg-white hover:text-black"
+              >
+                contatos
+              </a>
             </nav>
           </div>
           <div className="mobile-header md:hidden">
@@ -60,16 +78,29 @@ export default function Home() {
 
       {stateMenu && <div className='w-screen flex mt-24 justify-end'>
         <div className="w-1/2 fixed md:hidden space-y-1 px-2 pt-2 pb-3 sm:px-3 bg-black text-end rounded-bl-lg z-10">
-                    <a href="#" className="text-gray-300 hover:bg-soft-black hover:text-white block px-3 py-2 rounded-md text-white font-medium"
-                    onClick={() => setStateMenu(!stateMenu)}
-                    >home</a>
-                    <a href="#projects" className="text-gray-300 hover:bg-soft-black hover:text-white block px-3 py-2 rounded-md text-white font-medium"
-                    onClick={() => setStateMenu(!stateMenu)}
-                    >projetos</a>
-                    <a href="#footer" className="text-gray-300 hover:bg-soft-black hover:text-white block px-3 py-2 rounded-md text-white font-medium"
-                    onClick={() => setStateMenu(!stateMenu)}
-                    >contatos</a>
-          </div>
+          <a
+            className="text-gray-300 hover:bg-soft-black hover:text-white block px-3 py-2 rounded-md text-white font-medium"
+            onClick={() => {scroll.scrollToTop({smooth:true, duration: 750}), setStateMenu(!stateMenu)}}
+          >
+            home
+          </a>
+          <Link
+            to="projects"
+            smooth={true}
+            duration={750}
+            offset={-250}
+            className="text-gray-300 hover:bg-soft-black hover:text-white block px-3 py-2 rounded-md text-white font-medium"
+            onClick={() => setStateMenu(!stateMenu)}
+          >
+            projetos
+          </Link>
+          <a
+            className="text-gray-300 hover:bg-soft-black hover:text-white block px-3 py-2 rounded-md text-white font-medium "
+            onClick={() => {scroll.scrollToBottom({smooth:true, duration: 750}), setStateMenu(!stateMenu)}}
+          >
+            contatos
+          </a>
+        </div>
       </div>}
 
       <main className='w-screen'>
@@ -80,7 +111,7 @@ export default function Home() {
               <div className='w-4 h-4 bg-yellow rounded-full'></div>
               <div className='w-4 h-4 bg-green rounded-full'></div>
             </div>
-            <div className='px-12 flex flex-col py-8 gap-y-8'>
+            <div className='px-8 sm:px-12 flex flex-col py-8 gap-y-8'>
               <div className='flex flex-col gap-y-5 w-full'>
                 <div>
                   <p className='text-xl sm:text-2xl text-gray font-body'>Oi, me chamo</p>
@@ -90,13 +121,18 @@ export default function Home() {
                 <p className='text-lg sm:text-xl text-black font-details'>
                   Seja muito bem-vindo(a) ao meu portfólio!
                 </p>
-                <p className='text-lg sm:text-xl text-black font-details'>
+                <p className='text-lg sm:text-xl text-black font-details hidden sm:block'>
                   Atualmente resido em Belém, capital do estado do Pará. Estou cursando o sexto semestre de Ciência da Computação na Universidade Federal do Pará.
                 </p>
                 <p className='text-lg sm:text-xl text-black font-details'>
-                  Fico muito feliz que tenha reservado um pedacinho do seu tempo para conhecer mais sobre mim e meu trabalho. Neste portfólio, você encontrará alguns dos projetos e experiências que adquiri ao longo de minha jornada acadêmica e profissional.
+                  <span
+                  className='hidden sm:block'
+                  >
+                    Fico muito feliz que tenha reservado um pedacinho do seu tempo para conhecer mais sobre mim e meu trabalho.
+                  </span>
+                  Neste portfólio, você encontrará alguns dos projetos e experiências que adquiri ao longo de minha jornada acadêmica e profissional.
                 </p>
-                <p className='text-lg sm:text-xl text-black font-details'>{'Agradeço novamente por sua visita ❤️'}</p>
+                <p className='text-lg sm:text-xl text-black font-details'>{'Agradeço pela sua visita ❤️'}</p>
               </div>
               <div className='grid grid-cols-2 gap-y-2 gap-x-4 sm:flex sm:gap-x-5'>
                 <Button
@@ -119,7 +155,7 @@ export default function Home() {
           </div>
           
           <div className='hidden xl:block'>
-            <Image src={Me} alt='A people developer' className='w-[300px] rounded-lg'/>
+            <Image src={People} alt='A people developer' className='w-fit rounded-lg'/>
           </div>
         </section>
         
@@ -136,8 +172,10 @@ export default function Home() {
           </div>
         </section>
 
-        <section 
-        className='flex-col px-6 pb-32 bg-gradient-to-b from-[black_13.55%] via-[black_90%] to-[gray_200.53%]' id='projects'>
+        <Element
+          name='projects'
+          className='flex-col px-6 pb-32 bg-gradient-to-b from-[black_13.55%] via-[black_90%] to-[gray_200.53%]' id='projects'
+        >
           <h1 className='text-center text-3xl font-details font-bold text-white mb-9'>Projetos pessoais</h1>
           <div className='flex flex-col w-full gap-x-20 gap-y-10 justify-center items-center md:flex-row md:items-stretch'>
             <Project
@@ -151,7 +189,7 @@ export default function Home() {
               url={null}
             />
           </div>
-        </section>
+        </Element>
       </main>
 
       <footer className='flex justify-between items-center w-full h-32 bg-black px-5 2xl:px-44 md:px-36' id='footer'>
