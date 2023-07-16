@@ -130,11 +130,10 @@ export default function Home() {
                 </p>
                 <p className='text-lg sm:text-xl text-black font-details'>
                   <span
-                  className='hidden sm:block'
+                    className='hidden sm:block'
                   >
                     Fico muito feliz que tenha reservado um pedacinho do seu tempo para conhecer mais sobre mim e meu trabalho.
-                  </span>
-                  Neste portfólio, você encontrará alguns dos projetos e experiências que adquiri ao longo de minha jornada acadêmica e profissional.
+                  </span> <br />Neste portfólio, você encontrará alguns dos projetos e experiências que adquiri ao longo de minha jornada acadêmica e profissional.
                 </p>
                 <p className='text-lg sm:text-xl text-black font-details'>{'Agradeço pela sua visita ❤️'}</p>
               </div>
