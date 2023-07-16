@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect, use } from 'react';
+import React, {useState, useEffect} from 'react';
 import Image from 'next/image'
 import { Link, Element, animateScroll as scroll } from 'react-scroll'
 import AOS from 'aos';
@@ -10,7 +10,7 @@ import Project from '/components/Project'
 
 import GitIcon from '/assets/github-svgrepo-com.svg'
 import LinkedinIcon from '/assets/linkedin-svgrepo-com.svg'
-import People from '/assets/people_svg.svg'
+import People from '/public/people_svg.svg'
 import Logo from '/assets/logo.svg'
 import InstagramLogo from '/assets/instagram-logo.svg'
 import TwitterLogo from '/assets/twitter-logo.svg'
@@ -144,10 +144,10 @@ export default function Home() {
                   icon={GitIcon}
                   />
                 <Button
-                    link={'https://www.linkedin.com/in/jonas-alberto/'}
-                    text='LinkedIn' 
-                    icon={LinkedinIcon}
-                  />
+                  link={'https://www.linkedin.com/in/jonas-alberto/'}
+                  text='LinkedIn' 
+                  icon={LinkedinIcon}
+                />
                 <Button
                   link={'/curriculo-jonas.pdf'}
                   text='CV' 
@@ -158,7 +158,12 @@ export default function Home() {
           </div>
           
           <div className='hidden xl:block'>
-            <Image src={People} alt='A people developer' className='w-fit rounded-lg'/>
+            <Image
+              priority
+              src={People}
+              alt='A people developer'
+              className='w-fit rounded-lg'
+            />
           </div>
         </section>
         
