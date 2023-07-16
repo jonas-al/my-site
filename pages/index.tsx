@@ -108,8 +108,11 @@ export default function Home() {
       </div>}
 
       <main className='w-screen'>
-        <section className='h-[85vh] px-5 mt-32 justify-center w-full sm:mt-32  flex xl:justify-between items-center sm:px-20 gap-x-5' id='home'>
-          <div className='bg-white max-w-[400px] rounded-3xl min-[450px]:max-w-mac-window-w' data-aos="fade-up">
+        <section
+          className='h-[85vh] px-5 mt-32 justify-center w-full sm:mt-32  flex xl:justify-between items-center sm:px-20 gap-x-5' 
+          data-aos="fade-up"
+        >
+          <div className='bg-white max-w-[400px] rounded-3xl min-[450px]:max-w-mac-window-w'>
             <div className='flex pl-7 h-10 items-center gap-x-3 rounded-tl-3xl rounded-tr-3xl bg-light-gray'>
               <div className='w-4 h-4 bg-red rounded-full'></div>
               <div className='w-4 h-4 bg-yellow rounded-full'></div>
