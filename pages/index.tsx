@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect } from 'react';
+import React, { Component, useState, useEffect, use } from 'react';
 import Image from 'next/image'
 import { Link, Element, animateScroll as scroll } from 'react-scroll'
 import AOS from 'aos';
@@ -22,7 +22,8 @@ import Site3 from '/assets/site-3.png'
 export default function Home() {
 
   useEffect(() => {
-    AOS.init();
+    AOS.init()
+    window.scrollTo(0, 0)
   }, [])
 
   const [stateMenu, setStateMenu] = useState(false);
@@ -107,7 +108,7 @@ export default function Home() {
       </div>}
 
       <main className='w-screen'>
-        <section className='h-[80vh] px-5 mt-32 justify-center w-full sm:mt-32  flex xl:justify-between items-center sm:px-20 gap-x-5' id='home'>
+        <section className='h-[85vh] px-5 mt-32 justify-center w-full sm:mt-32  flex xl:justify-between items-center sm:px-20 gap-x-5' id='home'>
           <div className='bg-white max-w-[400px] rounded-3xl min-[450px]:max-w-mac-window-w' data-aos="fade-up">
             <div className='flex pl-7 h-10 items-center gap-x-3 rounded-tl-3xl rounded-tr-3xl bg-light-gray'>
               <div className='w-4 h-4 bg-red rounded-full'></div>
